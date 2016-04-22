@@ -26,6 +26,7 @@ interface TV4MultiResult extends TV4BaseResult {
 	errors:TV4Error[];
 }
 interface TV4 {
+	validate(data: any, schema: any): boolean;
 	validateResult(data:any, schema:any):TV4SingleResult;
 	validateMultiple(data:any, schema:any):TV4MultiResult;
 
@@ -42,7 +43,4 @@ interface TV4 {
 	getSchemaMap():TV4SchemaMap;
 	errorCodes:TV4ErrorCodes;
 }
-declare module "tv4" {
-	var tv4: TV4
-	export = tv4;
-}
+declare var tv4: TV4;
