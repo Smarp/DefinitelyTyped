@@ -4,6 +4,7 @@
 // Definitions: https://github.com/Smarp/DefinitelyTyped
 
 interface Fixture {
+	error: string;
 	el(): void;
 	load(files: any): any;
 	set(html_strings: string): any;
